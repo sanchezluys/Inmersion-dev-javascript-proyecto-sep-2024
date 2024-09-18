@@ -59,33 +59,33 @@ function calculatePasswordStrength(password) {
         let strength = 0;
 
         if (password.match(/[a-z]+/)) {
-            strength += 20;
+            strength += 25;
         }
         if (password.match(/[A-Z]+/)) {
-            strength += 20;
+            strength += 25;
         }
         if (password.match(/[0-9]+/)) {
-            strength += 20;
+            strength += 25;
         }
         if (password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/)) 
         {
-            strength += 20;
+            strength += 25;
         }
         // ⚠️❌✅
-        if (strength < 33) {
+        if (strength <= 50) {
             passwordStrength.classList.remove('medium', 'strong');
             passwordStrength.classList.add('weak');
-            passwordStrength.textContent = ' ❌ Debil ❌';
+            passwordStrength.textContent = ' ❌ Debil ❌'+':'+strength;
             passwordStrength.style.textAlign = 'center';
-        } else if (strength < 66) {
+        } else if (strength < 75) {
             passwordStrength.classList.remove('weak', 'strong');
             passwordStrength.classList.add('medium');
-            passwordStrength.textContent = ' ⚠️ Media ⚠️';
+            passwordStrength.textContent = ' ⚠️ Media ⚠️'+':'+strength;
             passwordStrength.style.textAlign = 'center';
         } else {
             passwordStrength.classList.remove('weak', 'medium');
             passwordStrength.classList.add('strong');
-            passwordStrength.textContent = ' ✅ Fuerte ✅';
+            passwordStrength.textContent = ' ✅ Fuerte ✅'+':'+strength;
             passwordStrength.style.textAlign = 'center';
         }
 

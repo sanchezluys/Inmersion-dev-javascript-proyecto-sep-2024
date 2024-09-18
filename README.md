@@ -29,7 +29,12 @@ Puedes acceder al proyecto en vivo haciendo clic en el siguiente enlace:
 
 Aquí te dejamos una pequeña captura de la aplicación en acción:
 
-![Vista Previa](ruta/a/la/imagen.png)
+![alt debil](/assets/img/resultados/image-2.png)
+
+![alt medio](/assets/img/resultados/image-1.png)
+
+![alt fuerte](/assets/img/resultados/image.png)
+
 
 ## 🤝 Contribuciones
 
